@@ -1,4 +1,5 @@
 #include "cachelab.h"
+#include <unistd.h>
 #include <stdlib.h>
 
 /* define cache */
@@ -164,7 +165,10 @@ int main(int argc, char ** argv) {
     printSummary(hits, misses, eviction);
     return 0;
 }
-{
-    printSummary(0, 0, 0);
-    return 0;
-}
+
+
+
+
+
+
+
