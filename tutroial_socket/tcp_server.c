@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 #include <sys/types.h>
-#include <socket.h>
+#include <sys/socket.h>
 #include <netinet/in.h>
 
 int main() {
@@ -16,14 +16,14 @@ int main() {
 	server_address.sin_port = htons(9002);
 	server_address.sin_addr.s_addr = INADDR_ANY;
 	
-	bind(server_socket, (strcut sockaddr*) &server_address, sizeof(server_address));
+	bind(server_socket, (struct sockaddr*) &server_address, sizeof(server_address));
 	listen(server_socket, 5);
 	
 	int client_socket;
 	client_socket = accept(server_socket, NULL, NULL);
 
 	// send the message
-	send(client_socket, server_message, sizeof(server_massgae), 0);
+	send(client_socket, server_message, sizeof(server_message), 0);
 
 	close(server_socket);
 	return 0;
