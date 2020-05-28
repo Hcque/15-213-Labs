@@ -10,7 +10,7 @@ int main(int argc, char * argv) {
 	char *address;
 	address = argv[1];
 
-	int clinet_socket = socket(AF_INET, SOCK_STREAM, 0);
+	int client_socket = socket(AF_INET, SOCK_STREAM, 0);
 
 	//connect to an address
 	struct sockaddr_in remote_address;

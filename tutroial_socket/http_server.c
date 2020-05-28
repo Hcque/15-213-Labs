@@ -30,7 +30,7 @@ int main() {
 
 	int clinet_socket;
 	while (1) {
-		client_socket = accept(server_socket, NULL, NULL);
+		int client_socket = accept(server_socket, NULL, NULL);
 		send(client_socket, http_header, sizeof(http_header), 0);
 		close(client_socket);
 	}

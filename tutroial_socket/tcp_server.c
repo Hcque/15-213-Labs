@@ -7,7 +7,7 @@
 #include <netinet/in.h>
 
 int main() {
-	char server_message[256] = "You have reach the server.";
+	char server_message[256] = "You have reach the server.\n";
 	int server_socket;
 	server_socket = socket(AF_INET, SOCK_STREAM, 0);
 
